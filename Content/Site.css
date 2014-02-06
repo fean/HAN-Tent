@@ -1,0 +1,360 @@
+/* Base
+=================================    */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Roboto Light'), local('Roboto-Light'), url(http://themes.googleusercontent.com/static/fonts/roboto/v10/Hgo13k-tfSpn0qi1SFdUfT8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+
+body, html {
+    background: url(https://authiq.org/Content/images/bg-body.jpg) repeat;
+    font-family: 'Roboto';
+    min-width: 1024px;
+    padding: 0;
+    margin: 0;
+}
+
+header, div[role="main"] {
+    width: -webkit-calc(100% - 152px);
+    width: -moz-calc(100% - 152px);
+    width: calc(100% - 152px);
+}
+
+header {
+    height: 260px;
+}
+
+div[role="main"] {
+    display: block;
+    position: absolute;
+    min-height: -webkit-calc(100% - 240px);
+    min-height: -moz-calc(100% - 240px);
+    min-height: calc(100% - 240px);
+    margin-top: -20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+a, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
+h2 {
+    text-align: center;
+    font-size: 45px;
+    margin: 40px 0px 40px 0px;
+}
+
+.logo {
+    float: left;
+    width: 450px;
+    height: 150px;
+    background-image: url(http://placehold.it/450x150);
+    margin: 20px 0px 0px 50px;
+}
+
+/* Menu
+=================================    */
+.menu {
+    height: 51px;
+    width: 100%;
+    float: left;
+    background-color: rgba(255,255,255,0.95);
+    border-top: 1px solid #BCBCBC;
+    border-bottom: 1px solid #BCBCBC;
+    padding-left: 0;
+}
+
+.menu-item {
+    display: inline-block;
+}
+
+.menu-item > a {
+    display: block;
+    padding: 15px 30px;
+    transition: background-color 200ms ease-in-out;
+    margin-left: 15px;
+    color: #757981;
+}
+
+.menu-item:first-child > a {
+    margin-left: 50px;
+}
+
+.menu-item > a:hover {
+    background-color: #EDEFF4;
+}
+
+/* Error - 404
+=================================    */
+
+.error {
+    width: 700px;
+    height: 245px;
+    background-color: #fff2f2;
+    margin: 50px auto;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin: 100px auto;
+}
+
+.error > h1 {
+    text-align: center;
+    
+    margin-bottom: 40px;
+}
+
+.error > img {
+    width: 128px;
+    float: left;
+    margin-left: 45px;
+}
+
+.error > p {
+    padding: 0px 10px;
+    width: 435px;
+    float: left;
+    margin-left: 25px;
+    margin-top: -10px;
+}
+
+/* Login - Layout
+=================================    */
+.login-field {
+    float: right;
+    width: 300px;
+    height: 100px;
+    margin-top: 20px;
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 2px;
+    margin: 45px 40px 0px 0px;
+}
+
+.login-button, .register-button {
+    display: inline-block;
+    color: white;
+    line-height: 38px;
+    height: 38px;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 250ms ease-in-out, border-color 250ms ease-in-out;
+}
+
+.login-button {
+    width: 100px;
+    border: 1px solid #357ebd;
+    background-color: #428bca;
+    margin: 30px 10px 0px 30px;
+}
+
+.login-button:hover {
+    color: white;
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+
+.register-button {
+    width: 125px;
+    background-color: #5cb85c;
+    border: 1px solid #4cae4c;
+}
+
+.register-button:hover {
+    color: white;
+    background-color: #47a447;
+    border-color: #398439;
+}
+
+/* Login - Form
+=================================    */
+
+.login-outer-wrap, .register-outer-wrap {
+    margin: 50px auto;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+    width: 850px;
+    height: 420px;
+}
+
+.login-inner-wrap, .register-inner-wrap {
+    border: 1px solid rgba(0,0,0,0.2);
+    width: 780px;
+    height: 350px;
+    margin: 35px;
+}
+
+.login-inner-inner-wrap, .register-inner-inner-wrap {
+    background-color: #E3E3E3;
+    width: 770px;
+    height: 340px;
+    margin: 5px;
+}
+
+.login-form, .register-form {
+    background-color: #F0F0F0;
+    width: 770px;
+    height: 262px;
+}
+
+.login-inner-inner-wrap > h1, .register-inner-inner-wrap > h1 {
+    margin: 0px 0px -12px 50px;
+}
+
+.login-inner-inner-wrap > p, .register-inner-inner-wrap > p {
+    font-size: 14px;
+    margin-left: 50px;
+}
+
+.login-form > input[type="submit"] {
+    font-size: initial;
+    width: 100px;
+    border: 1px solid #357ebd;
+    background-color: #428bca;
+    display: inline-block;
+    color: white;
+    line-height: 32px;
+    height: 38px;
+    margin: 35px 0px 0px 430px;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 250ms ease-in-out, border-color 250ms ease-in-out;
+}
+
+.login-form > input[type="submit"]:hover {
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+
+.login-form > input[type="text"], .login-form > input[type="password"] {
+    -webkit-box-shadow: inset 0 1px 2px #ddd,0 1px 0 #fff;
+    -moz-box-shadow: inset 0 1px 2px #ddd,0 1px 0 #fff;
+    box-shadow: inset 0 1px 2px #ddd,0 1px 0 #fff;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 20px 260px 0px 260px;
+    padding: 10px;
+    border-radius: 5px;
+    width: 250px;
+    float: left;
+    font-size: 15px;
+}
+
+.login-form > input[type="text"] {
+    margin-top: 50px;
+}
+
+/* Register - Form
+=================================    */
+
+.register-outer-wrap {
+    height: 520px;
+}
+
+.register-inner-wrap {
+    height: 450px;
+}
+
+.register-inner-inner-wrap {
+    height: 440px;
+}
+
+.register-form {
+    height: 362px;
+}
+
+.register-form > input[type="text"], .register-form > input[type="password"] {
+    -webkit-box-shadow: inset 0 1px 2px #ddd,0 1px 0 #fff;
+    -moz-box-shadow: inset 0 1px 2px #ddd,0 1px 0 #fff;
+    box-shadow: inset 0 1px 2px #ddd,0 1px 0 #fff;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    width: 400px;
+    float: left;
+    font-size: 15px;
+    margin: 20px 174px 0px 174px;
+}
+
+.register-form > input:first-child {
+    margin-top: 50px;
+}
+
+.register-form > .register-button {
+    line-height: 35px;
+    margin: 30px 0px 0px 470px;
+    font-size: initial;
+}
+
+/* Advertisement
+=================================    */
+.ad-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 100%;
+    border-left: 1px solid black;
+    background: url(https://authiq.org/Content/images/bg-body.jpg) repeat;
+}
+
+.ad {
+    position: fixed;
+    top: 50%;
+    right: 9px;
+    width: 120px;
+    height: 600px;
+    padding: 5px;
+    border: 1px solid rgba(0,0,0,0.25);
+    background-image: url(http://placehold.it/120x600);
+    margin-top: -306px;
+}
+
+/* News
+=================================    */
+
+.news {
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    height: 255px;
+    width: 850px;
+    margin: 50px auto;
+    background-color: #fff;
+}
+
+.news:nth-child(even) > .news-image {
+    float: right;
+}
+
+.news:nth-child(odd) > .news-image {
+    float: left;
+}
+
+.news-image {
+    width: 255px;
+}
+
+.news > h1 {
+    float: left;
+    width: 595px;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+}
+
+.news > p {
+    float: left;
+    width: 535px;
+    padding: 0px 30px 0px 30px;
+    margin-top: 10px;
+}
