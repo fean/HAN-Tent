@@ -8,6 +8,7 @@
         <meta charset="utf-8" />
         <title>Tent</title>
         <link rel="stylesheet" href="/Content/site.css" />
+        <link rel="stylesheet" href="/Content/Fonts.css" />
         <script src="/Content/site.js"></script>
     </head>
     <body>
@@ -39,7 +40,7 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Shop" class="menu-item-link">
+                    <a href="/Shop/Overview" class="menu-item-link">
                         Webshop
                     </a>
                 </li>
