@@ -25,22 +25,22 @@
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Acties" class="menu-item-link">
+                    <a href="/index.php?page=Acties" class="menu-item-link">
                         Acties
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Over" class="menu-item-link">
+                    <a href="/index.php?page=Over" class="menu-item-link">
                         Over ons
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Vacatures" class="menu-item-link">
+                    <a href="/index.php?page=Vacatures" class="menu-item-link">
                         Vacatures
                     </a>
                 </li>
                 <li class="menu-item">
-                    <a href="/Shop/Overview" class="menu-item-link">
+                    <a href="/shop.php?page=Overview" class="menu-item-link">
                         Webshop
                     </a>
                 </li>

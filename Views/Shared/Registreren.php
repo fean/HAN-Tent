@@ -6,7 +6,7 @@
     <div class="register-inner-wrap">
         <div class="register-inner-inner-wrap">
             <h1>Registreren.</h1>
-            <p>Als je al een account hebt, kun je ook <a href="/Login">inloggen</a>.</p>
+            <p>Als je al een account hebt, kun je ook <a href="/index.php?page=Login">inloggen</a>.</p>
             <form class="register-form" method="post">
                 <input id="username" name="username" type="text" placeholder="Gebruikersnaam" />
                 <input id="mail"name="mail" type="text" placeholder="Mail adres" />

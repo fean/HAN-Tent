@@ -362,6 +362,31 @@ h2 {
     margin-top: 10px;
 }
 
+/* Over ons
+=================================    */
+
+.about-columns {
+    display: inline-block;
+    width: 800px;
+    margin: 0 auto 0 auto;
+    padding: 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.about-content {
+   padding: 200px; 
+}
+
+.about-img {
+    float: right;
+    margin-left: 15px;
+    width: 300px;
+}
 
 /* Product Overview
 =================================    */
@@ -481,3 +506,99 @@ h2 {
     float: right;
     margin-top: 350px;
 }
+
+/* Over ons
+=================================    */
+
+.about-content {
+    width: 800px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px 30px 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.about-img {
+    float: right;
+    margin-left: 15px;
+    max-width: 300px;
+    width: auto;
+}
+
+/* productpagina
+=================================    */
+
+.product-content {
+    width: 800px;
+    margin: 20px auto 100px auto;
+    padding: 25px;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 2px;
+    -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+
+.product-button-terug, .product-button-add {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #357ebd;
+    background-color: #428bca;
+    transition: background-color 250ms ease-in-out, border-color 250ms ease-in-out;
+}
+
+.product-button-terug:hover, .product-button-add:hover {
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+
+.product-button-terug {
+    width: 70px;
+    margin-bottom: 20px;
+}
+
+.product-afbeelding {
+    float: left;
+    width: 400px;
+    margin: 0px 30px 0 0;
+}
+
+.product-main {
+    display: inline-block;
+    height: 300px;
+}
+
+.product-gegevens{
+    height: 220px;
+}
+
+.product-omschrijving { 
+    font-size: 18px;
+    font-weight: bolder; 
+    margin: 0 0 10px 0;
+}
+
+.product-details {
+    padding: 10px 0 0 10px;
+}
+
+.product-button-add {
+    margin-top: 17px;
+    display: inline-block;
+    width: 120px;
+}
+
+.product-button-add:hover {
+    background-color: #3276b1;
+    border-color: #285e8e;
+}
+ 
+

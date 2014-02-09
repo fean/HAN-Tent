@@ -1,8 +1,8 @@
 <?php
-    
+    include './Includes/SecurityHelpers.php';
 ?>
 
 <div class="login-field">
-    <a href="/Login" class="login-button"><i class="fa fa-lock"></i> Login</a>
-    <a href="/Registreren" class="register-button"><i class="fa fa-plus"></i> Registreren</a>
+    <a href="/index.php?page=Login" class="login-button"><i class="fa fa-lock"></i> Login</a>
+    <a href="/index.php?page=Registreren" class="register-button"><i class="fa fa-plus"></i> Registreren</a>
 </div>
