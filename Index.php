@@ -20,7 +20,7 @@
             <ul class="menu">
                 <li class="menu-item">
                     <a href="/" class="menu-item-link">
-                        Nieuws
+                        Nieuws.
                     </a>
                 </li>
                 <li class="menu-item">
