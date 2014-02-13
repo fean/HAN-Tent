@@ -4,9 +4,9 @@
 
 <h2>Over ons</h2>
 <br />
-<h1>Wie zijn wij</h1>
-<div>
-    <img src="Content/images/team.jpg" id="imgCtrl" align="right" alt="niks" />
+<div class="about-columns">
+    <h1>Wie zijn wij</h1>
+    <img src="Content/images/team.jpg" class="about-img" alt="team afbeelding" />
     <div id="content">Lorem ipsum dolor sit amet,
     consectetur adipiscing elit. Sed lobortis cursus porttitor.
      Nunc interdum aliquam ante,
@@ -18,18 +18,10 @@
     imperdiet mollis. Donec ultrices luctus pretium.
     Phasellus malesuada orci mi, ac condimentum erat
     euismod ut. Donec ut hendrerit urna.</div>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+</div>
+<div class="about-columns">
     <h1>Routebeschrijving</h1>
-    <img src="Content/images/route.jpg" id="imgCtrl" align="right" alt="niks" />
+    <img src="Content/images/route.jpg" class="about-img" alt="routebeschrijving" />
     <div id="content">Lorem ipsum dolor sit amet,
     consectetur adipiscing elit. Nam in interdum ligula.
     In porttitor interdum urna, ac ullamcorper tortor
