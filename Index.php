@@ -1,5 +1,5 @@
 <?php
-   $controller = "Site";
+    $controller = "Site";
 ?>
 
 <!DOCTYPE html>
