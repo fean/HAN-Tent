@@ -1,19 +1,33 @@
 <?php
-
+    
 ?>
- 
+
 <div class="product-content">
-    <div class="product-button">terug</div>
-    <div class="product-afbeelding">
-        <img src="Content/images/tent_product.jpg" alt="product_afbeelding" >
+    <div class="product-button-terug"><i class="fa fa-chevron-circle-left"></i>&nbsp;Terug</div>
+    <div>
+        <img src="http://placehold.it/400x300" alt="product_afbeelding" class="product-afbeelding" />
+
+        <div class="product-main">
+            <div class="product-gegevens">
+                <div class="product-omschrijving">
+                    Product: 2 persoons tent
+                </div>
+                <div class="product-omschrijving">
+                    Prijs: &euro; 269,99
+                </div>
+                <div class="product-details">
+                    Op voorraad: Ja
+                </div>
+            </div>
+            <div class="product-details">
+                    Aantal: 1
+            </div>
+            <div class="product-button-add"><i class="fa fa-shopping-cart"></i>&nbsp;Toevoegen</div>
+        </div>
     </div>
-    <div class="product-omschrijving">
-        <p>Product: 2 persoons tent</p>
-    </div>
-    <div class="product-omschrijving">
-        <p>prijs</p>
-    </div>
-    <div class="product-details">
+
+    <div>
+        <h3>Product details</h3>
         <p>Integer turpis quam, commodo sit amet nibh sed, rhoncus tristique nisi.
             Quisque quis sem sodales, bibendum lacus luctus, pharetra sapien.
             Aenean id lacus in dolor egestas fringilla id et turpis. Donec sagittis volutpat
@@ -22,17 +36,5 @@
             arcu placerat pellentesque non sit amet turpis. Donec semper luctus nulla quis
             molestie.</p>
     </div>
-    <div class="product-omschrijving">
-        <p>voorraad</p>
-    </div>
-    <div>
-        <p>prijs</p>
-    </div>
-    <div>
-        <p>aantal</p>
-    </div>
-    <div class="product-button">
-        </p>toevoegen</p>
-    </div>
-</div>
 
+</div>

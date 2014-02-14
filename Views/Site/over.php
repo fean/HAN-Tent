@@ -6,7 +6,7 @@
 <div class="about-content">
     <div class="about-columns">
         <h1>Wie zijn wij</h1>
-        <img src="Content/images/team.jpg" class="about-img" alt="team afbeelding" />
+        <img src="http://placehold.it/400x300" class="about-img" alt="team afbeelding" />
         <div id="content">
             Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Sed lobortis cursus porttitor.
@@ -23,7 +23,7 @@
     </div>
     <div class="about-columns">
         <h1>Routebeschrijving</h1>
-        <img src="Content/images/route.jpg" class="about-img" alt="routebeschrijving" />
+        <img src="/Content/images/route.jpg" class="about-img" alt="routebeschrijving" />
         <div id="content">
             Lorem ipsum dolor sit amet,
             consectetur adipiscing elit. Nam in interdum ligula.
