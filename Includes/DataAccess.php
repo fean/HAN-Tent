@@ -1,12 +1,11 @@
 <?php
     //Include the dependencies
     require 'Entities.php';
-    
+
     /**
     *Filters to be used with DataAccess.ApplyFilter
     *@abstract
     *@author Leonard Breitkopf
-    
     */
     abstract class Filters
     {
@@ -49,10 +48,15 @@
         *@param string $password = '' This optional parameter represents the password used to connect.
         *
         *@access public
+        *@throws PDOException
         */
         public function __construct($connect = false, $server = '', $database = '', $username = '', $password = '') {
-            if ($connect)
-                $this->connect($server, $database, $username, $password);
+            try {
+                if ($connect)
+                    $this->connect($server, $database, $username, $password);
+            } catch (PDOException $e) {
+                throw $e;
+            }
         }
     
         /**
@@ -87,13 +91,12 @@
         *After checks have completed successfuly returns User object else throws Exception.
         *
         *@param string $username This parameter represents the username used.
-        *
         *@param string $password This parameter represents the password used.
-        *
         *@return User An entity Object representing the user making the login request.
         *
         *@access public
-        *@throws PDOException & Exception
+        *@throws PDOException
+        *@throws Exception
         */
         public function doLogin($username, $password) {
             if ($this->connected) {
@@ -124,17 +127,16 @@
         *@param string $password This parameter represents the password used.
         *@param string $email This parameter represents the e-mail address used.
         *
-        *@return User An entity Object representing the user making the registration request.
+        *@return bool A value representing the success of the action.
         *
         *@access public
-        *@throws PDOException & Exception
+        *@throws PDOException
+        *@throws Exception
         */
         public function registerUser($username, $password, $email) {
             if ($this->connected) {
                 try {
                     $statement = $this->PDO->prepare(self::QRY_REGISTER);
-                    echo $username .' + ' . $password . ' + ' . $email . '<br />';
-                    echo (self::sanitizeString($username) .' + ' . self::hashPassword($password) . ' + ' . self::sanitizeString($email) . '<br />');
                     if($statement->execute(array(
                                     ':username' => self::sanitizeString($username), 
                                     ':password' => self::hashPassword($password), 
@@ -160,7 +162,8 @@
         *@return User An entity Object representing the user.
         *
         *@access public
-        *@throws PDOException & Exception
+        *@throws PDOException
+        *@throws Exception
         */
         public function getUserByName($username) {
             if ($this->connected) {
@@ -194,7 +197,8 @@
         *@return User An entity Object representing the user.
         *
         *@access public
-        *@throws PDOException & Exception
+        *@throws PDOException
+        *@throws Exception
         */
         public function getUserByID($id) {
             if ($this->connected) {
@@ -226,7 +230,8 @@
         *@return Product[] An array consisting of Product entity objects.
         *
         *@access public
-        *@throws PDOException & Exception
+        *@throws PDOException
+        *@throws Exception
         */
         public function getAllProducts() {
             if($this->connected){
@@ -259,7 +264,8 @@
         *@return Product An entity Object representing the user.
         *
         *@access public
-        *@throws PDOException & Exception
+        *@throws PDOException
+        *@throws Exception
         */
         public function getProduct($id) {
             if($this->connected) {
@@ -283,6 +289,17 @@
             }
         }
     
+        /**
+        *Returns the current connection state.
+        *
+        *@return bool Connection state.
+        *
+        *@access public
+        */
+        public function isConnected() {
+            return $this->connected;
+        }
+
         /**
         *Used to filter an array of products.
         *
