@@ -1,10 +1,11 @@
 <?php
     
 ?>
- <div class="product-content">
-    <div class="product-button-terug"><i class="fa fa-chevron-circle-left"></i>&nbsp;Terug</div>
+
+<div class="product-content">
+    <a href="/Shop.php?page=Overview" class="product-button-terug"><i class="fa fa-chevron-circle-left"></i>&nbsp;Terug</a>
     <div>
-        <img src="http://placehold.it/400x300" alt="product_afbeelding" class="product-afbeelding" />
+        <img src="//placehold.it/400x300" alt="product_afbeelding" class="product-afbeelding" />
         <div class="product-main">
             <div class="product-gegevens">
                 <div class="product-omschrijving">
@@ -20,7 +21,7 @@
             <div class="product-details">
                     Aantal: 1
             </div>
-            <div class="product-button-add"><i class="fa fa-shopping-cart"></i>&nbsp;Toevoegen</div>
+            <a href="/shop.php?page=Basket&id=1" class="product-button-add"><i class="fa fa-shopping-cart"></i>&nbsp;Toevoegen</a>
         </div>
     </div>
 
@@ -36,9 +37,9 @@
     </div>
 
 </div>        </div>
-        <div class="ad-wrap">
-            
-<div class="ad">
-    
+<div class="ad-wrap">
+
+    <div class="ad">
+
+    </div>
 </div>
-        </div>

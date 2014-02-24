@@ -1,4 +1,5 @@
 <?php
+   require './Includes/DataAccess.php';
    $controller = "Site";
 ?>
 

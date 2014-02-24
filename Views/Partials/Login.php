@@ -1,5 +1,5 @@
 <?php
-    include './Includes/SecurityHelpers.php';
+    
 ?>
 
 <div class="login-field">
