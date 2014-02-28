@@ -27,9 +27,9 @@
     
         //Query Constants
         const QRY_LOGIN = 'SELECT id, Mail, Verified FROM users WHERE users.Username = :username AND users.Password = :password;';
-        const QRY_REGISTER = 'INSERT INTO users(Username, Password, Mail) VALUES (:username, :password, :mail);';
-        const QRY_GETUSERWNAME = 'SELECT id, Mail, Verified FROM users WHERE users.Username = :username;';
-        const QRY_GETUSERWID = 'SELECT Username, Mail, Verified FROM users WHERE users.id = :id;';
+        const QRY_REGISTER = 'INSERT INTO users(Username, Password, Fullname, Mail) VALUES (:username, :password, :fullname, :mail);';
+        const QRY_GETUSERWNAME = 'SELECT id, Fullname, Mail, Verified FROM users WHERE users.Username = :username;';
+        const QRY_GETUSERWID = 'SELECT Username, Fullname, Mail, Verified FROM users WHERE users.id = :id;';
         const QRY_ALLPRODUCTS = 'SELECT * FROM products;';
         const QRY_PRODUCT = 'SELECT Name, Beschrijving, Prijs, Voorraad FROM products WHERE id = :id;';
     
@@ -124,6 +124,7 @@
         *After registration completed successfuly returns User object else throws Exception.
         *
         *@param string $username This parameter represents the username used.
+        *@param string $fullname This parameter represents the user's real and full name.
         *@param string $password This parameter represents the password used.
         *@param string $email This parameter represents the e-mail address used.
         *
@@ -133,12 +134,13 @@
         *@throws PDOException
         *@throws Exception
         */
-        public function registerUser($username, $password, $email) {
+        public function registerUser($username, $fullname, $password, $email) {
             if ($this->connected) {
                 try {
                     $statement = $this->PDO->prepare(self::QRY_REGISTER);
                     if($statement->execute(array(
-                                    ':username' => self::sanitizeString($username), 
+                                    ':username' => self::sanitizeString($username),
+                                    ':fullname' => self::sanitizeString($fullname), 
                                     ':password' => self::hashPassword($password), 
                                     ':mail' => self::sanitizeString($email)))) {
                         if ($statement->rowCount() > 0)
@@ -173,7 +175,7 @@
                                      ':username' => self::sanitizeString($username)))) {
                         $result = $statement->fetchAll();
                         if (count($result) > 0) {
-                            return new User($result[0][0], $username, $result[0][1], $result[0][2]);
+                            return new User($result[0][0], $username, $result[0][1], $result[0][2], $result[0][3]);
                         } else {
                             throw new Exception(self::ERROR_QRYNOSUCCESS);
                         }
@@ -208,7 +210,7 @@
                                      ':id' => self::sanitizeString($id)))) {
                         $result = $statement->fetchAll();
                         if (count($result) > 0) {
-                            return new User($result[0][0], $username, $result[0][1], $result[0][2]);
+                            return new User($id, $result[0][0], $result[0][1], $result[0][2], $result[0][3]);
                         } else {
                             throw new Exception(self::ERROR_QRYNOSUCCESS);
                         }
